@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+   
+   <!-- Daisyui -->
+   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+   <!-- Google font -->
+
+   <!-- tailwind custom css -->
+   <script>
+      tailwind.config = {
+         theme: {
+            extend: {
+               colors: {
+                  clifford: '#da373d',
+               }
+            }
+         }
+      }
+   </script>
+   <style>
+    .primary-color{
+      color: #1DD100;
+    }
+   </style>
+</head>
+<body class="">
+   <header>
+      <!-- Menu section -->
+      <nav class="max-w-[1170px] mx-auto">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+              </div>
+            
+            </div>
+            <a class="font-extrabold text-4xl">P-Ticket</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 font-medium text-lg">
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a class="btn btn-outline border-[#1DD100] text-[#1DD100] btn-success bg-[#1cd10016] text-2xl flex justify-center items-center gap-3">
+              <span>Bus</span><img src="images/Icons/tabler-icon-bus.png" alt=""></a>
+          </div>
+        </div>
+      </nav>
+   
+   </header>
+   <main>
+    <!-- banner section started -->
+    <section class="max-w-[1170px] m-auto mt-[20px] mb-28">
+      <div class="bg-[url('images/banner.png')] bg-cover bg-center h-[550px] w-full flex flex-col justify-center items-center gap-6 text-center">
+        <h1 class="font-extrabold text-[64px] text-white">
+          End-to-End Travel with <br>
+          <span class="primary-color">P Paribahan</span>
+        </h1>
+        <p class="text-[#FFFFFF] text-lg">Yes, you can run unit tests and view the results directly within the app. <br> The integrated testing features allow for a streamlined .</p>
+        <button class="btn btn-lg bg-[#1DD100] border-0 text-xl font-bold">Buy Tickets</button>
+      </div>
+ 
+    </section>
+    <!-- banner section ended -->
+    <!-- offer section started -->
+    <section class="max-w-[1170px] m-auto mb-28">
+      <div>
+        <h1 class="font-bold text-[40px] text-black text-center mb-[50px]">
+          Best offers for you
+        </h1>
+       <div class="flex gap-8 justify-center">
+        <div class="bg-[#FFBF0F] flex justify-between items-center p-[50px] rounded-3xl gap-x-14 divide-x-2 divide-dashed divide-white">
+          <div class="space-y-2">
+            <h2 class="text-[40px] font-extrabold">15% OFF</h2>
+            <h4 class="font-bold text-xl">on your next purchase</h4>
+            <p class="text-xl text-[#030712a7]">use by January 2024</p>
+          </div>
+          <div class="ps-10 space-y-2">
+            <h3 class="text-[32px] font-bold">NEW15</h3>
+            <p class="text-2xl text-[#03071288]">Coupon Code</p>
+          </div>
+        </div>
+        <div class="bg-[#F78C9C] flex justify-between items-center p-[50px] rounded-3xl gap-x-14 divide-x-2 divide-dashed divide-white">
+          <div class=" space-y-2">
+            <h2 class="text-[40px] font-extrabold">20% OFF</h2>
+            <h4 class="font-bold text-xl">on your next purchase</h4>
+            <p class="text-xl text-[#030712a7]">use by January 2024</p>
+          </div>
+          <div class="ps-10  space-y-">
+            <h3 class="text-[32px] font-bold">Couple 20</h3>
+            <p class="text-2xl text-[#03071288]">Coupon Code</p>
+          </div>
+        </div>
+     
+       </div>
+      </div>
+    </section>
+    <!-- offer section ended -->
+    <!-- buying section started -->
+
+    <!-- buying section ended -->
+   </main>
+   <footer>
+
+   </footer>
+
+
+
+   <!-- Tailwind -->
+   <script src="https://cdn.tailwindcss.com"></script>
+   <!-- Font awesome link -->
+   <script src="https://kit.fontawesome.com/ed2489f1af.js" crossorigin="anonymous"></script>
+</body>
+</html>
