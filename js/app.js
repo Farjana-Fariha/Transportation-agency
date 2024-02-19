@@ -84,7 +84,7 @@ function checkCoupon() {
       givenCouponStr.value = '';
       // disable apply coupon 
       disableApplyCoupon()
-   }else{
+   } else {
       const textContainer = document.getElementById('invalid-text');
       const div = document.createElement('div');
       div.innerHTML = `
@@ -92,4 +92,18 @@ function checkCoupon() {
       ` ;
       textContainer.appendChild(div);
    }
-}
+   }
+   // Next button enable
+   const phoneNumberField = document.getElementById('phoneNumber');
+   phoneNumberField.addEventListener('keyup', function(){
+      const phoneNumber = document.getElementById('phoneNumber').value;
+      if (seatArray.length >= 1 && phoneNumber != '') {
+         console.log('now', seatArray,phoneNumber);
+         const nextBtn = document.getElementById('nextBtn');
+         nextBtn.disabled = false;
+      }
+   })
+
+   function proccessComplete() {
+      
+   }
