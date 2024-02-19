@@ -98,12 +98,8 @@ function checkCoupon() {
    phoneNumberField.addEventListener('keyup', function(){
       const phoneNumber = document.getElementById('phoneNumber').value;
       if (seatArray.length >= 1 && phoneNumber != '') {
-         console.log('now', seatArray,phoneNumber);
          const nextBtn = document.getElementById('nextBtn');
          nextBtn.disabled = false;
       }
    })
 
-   function proccessComplete() {
-      
-   }
