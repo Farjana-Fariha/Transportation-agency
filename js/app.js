@@ -55,20 +55,35 @@ for (const seat of allSeats) {
          totalPriceStr.innerText = newTotal;
          // Update grand total
          const grandTotalStr = document.getElementById('grandTotal');
-          grandTotalStr.innerText = newTotal;
+         grandTotalStr.innerText = newTotal;
       } else {
          alert("You can't Book more than 4 seats");
       }
    });
 }
 // Apply coupon
-function checkCoupon(){
+function checkCoupon() {
    const coupon_1 = 'NEW15';
    const coupon_2 = 'Couple 20';
-   const givenCoupon = document.getElementById('givenCoupon').value;
-   if(givenCoupon == coupon_1 || givenCoupon == coupon_2){
+   const givenCouponStr = document.getElementById('givenCoupon');
+   const givenCoupon = givenCouponStr.value;
+   if (givenCoupon == coupon_1) {
+      // update grand giving the right coupon
       const grandTotalStr = document.getElementById('grandTotal');
       const grandTotal = parseInt(grandTotalStr.innerText);
-      console.log(grandTotal);
+      const newGrandTotal = grandTotal - (grandTotal * 0.15);
+      grandTotalStr.innerText = newGrandTotal;
+      givenCouponStr.value = '';
+      // disable apply coupon 
+      disableApplyCoupon()
+
+   } else if (givenCoupon == coupon_2) {
+      const grandTotalStr = document.getElementById('grandTotal');
+      const grandTotal = parseInt(grandTotalStr.innerText);
+      const newGrandTotal = grandTotal - (grandTotal * 0.2);
+      grandTotalStr.innerText = newGrandTotal;
+      givenCouponStr.value = '';
+      // disable apply coupon 
+      disableApplyCoupon()
    }
 }
