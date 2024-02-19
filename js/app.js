@@ -48,17 +48,27 @@ for (const seat of allSeats) {
             const applyCoupon = document.getElementById('applyCoupon');
             applyCoupon.disabled = false;
          }
-
+         // update total price
+         const totalPriceStr = document.getElementById('totalPrice');
+         const totalPrice = parseInt(totalPriceStr.innerText);
+         const newTotal = totalPrice + 550;
+         totalPriceStr.innerText = newTotal;
+         // Update grand total
+         const grandTotalStr = document.getElementById('grandTotal');
+          grandTotalStr.innerText = newTotal;
       } else {
          alert("You can't Book more than 4 seats");
       }
-
-
-
-
-
    });
 }
-
-// const allSeatElements = document.getElementById('all-seats').getElementsByClassName('seat');
-
+// Apply coupon
+function checkCoupon(){
+   const coupon_1 = 'NEW15';
+   const coupon_2 = 'Couple 20';
+   const givenCoupon = document.getElementById('givenCoupon').value;
+   if(givenCoupon == coupon_1 || givenCoupon == coupon_2){
+      const grandTotalStr = document.getElementById('grandTotal');
+      const grandTotal = parseInt(grandTotalStr.innerText);
+      console.log(grandTotal);
+   }
+}
