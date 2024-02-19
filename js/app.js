@@ -76,7 +76,6 @@ function checkCoupon() {
       givenCouponStr.value = '';
       // disable apply coupon 
       disableApplyCoupon()
-
    } else if (givenCoupon == coupon_2) {
       const grandTotalStr = document.getElementById('grandTotal');
       const grandTotal = parseInt(grandTotalStr.innerText);
@@ -85,5 +84,12 @@ function checkCoupon() {
       givenCouponStr.value = '';
       // disable apply coupon 
       disableApplyCoupon()
+   }else{
+      const textContainer = document.getElementById('invalid-text');
+      const div = document.createElement('div');
+      div.innerHTML = `
+      <p class="text-red-600 font-bold p-2">Invalid Coupon code!!</p>
+      ` ;
+      textContainer.appendChild(div);
    }
 }
